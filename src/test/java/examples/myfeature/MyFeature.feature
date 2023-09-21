@@ -10,5 +10,5 @@ Feature: MyFeature
     When feature.send(x)
     Then def result = feature.getExpectedResult()
     And karate.log('result', result)
-    And assert feature.assertResult1(result)
-    And assert feature.assertResult2(result)
+    And assert feature.assertResult1(karate.toJava(result))
+    And assert feature.assertResult2(karate.toJava(result))
